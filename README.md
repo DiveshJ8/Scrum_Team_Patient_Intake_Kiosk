@@ -4,18 +4,23 @@
    Divesh Jadhav - PM/BA & Quality & Dev Ops;
    John Paglia - UI/UX Developer;
    Parth Bharatkumar Yagnik - Data Architect;
+
 4. Far Vision: Full Kiosk interface where users can sign in, self-service check in, provide pre-appointment information, fill in their demographics, family and social history, insurance data, consent forms, validate data entered by the user and make these data available to Practice EHR.
+
 5. Near Vision: Creation of the first page of the interface for sign in/up to kiosk. Users can enter name, date of birth, email address. The system queries the database for user signing in and in case the user is not found, then redirects to the signup option. 
+
 6. StakeHolders: 
 			Internal: Doctors, Front Office
 			External: Patients
+
 7. Real Stakeholder- Front office staff: The staff will be the real stakeholder for this application. This application will decrease the workload of the front office staff, reduce patient-data entry errors, and improve efficiency of check in processes for patients and office staff.
+
 8. URL for Product Backlog : https://www.pivotaltracker.com/projects/2533031
+
 11. Explanation of User Stories Order
 The user stories are ordered in sequence of actions the user will perform when checking-in to interact with the application. The user will first login and if there is invalid login information then an error will pop up. They can also then sign up if they are not registered already. When the patient starts filling the intake form, they will view the progress using a navigation bar and be able to jump between sections to fill out information. The patient will start the intake process by filling out personal information such as address, gender, contact information, etc. They will then fill out healthcare insurance information followed by patient health history and consent and liability forms. Once the user enters in all the relevant information and submits the form, they will receive a confirmation and the front desk staff will be notified of the completed check in by the patient.  
 
-12 .
-Definition Of Ready : 
+12. Definition Of Ready : 
 A.
 a) Title - User Interface - Sign In Page:
 b) User story opening sentence - As a patient I want to sign in with my email/username for visit/check in to the clinic.
@@ -59,19 +64,24 @@ b) User story opening sentence - As a patient I want to add personal health hist
 c)Additional Details - The patient will be able to enter the required health related history which can be used by the doctor for a better treatment.
 d) Estimated in Story Points - 1
 
-8.
-Title - User Interface - Consent & Liability Forms
-User story opening statement - As a patient I want to provide my consent to the clinic to provide health services that are required so that my treatment can be done.
-Additional Details :- The patient will be providing consent for legal purposes so that his/her data shall be stored in the USA.
-Estimated in Story Point - 1
+H.
+a) Title - User Interface - Consent & Liability Forms
+b) User story opening statement - As a patient I want to provide my consent to the clinic to provide health services that are required so that my treatment can be done.
+c) Additional Details :- The patient will be providing consent for legal purposes so that his/her data shall be stored in the USA.
+d) Estimated in Story Point - 1
 
-9.a) Title - User Interface - Confirmation Screen:
+I.
+a) Title - User Interface - Confirmation Screen:
 b) User story opening sentence - As a patient once I am finished I would like to receive a final confirmation screen indicating that I have completed all steps and I am now checked in for my visit.
 c) Additional details - The confirmation screen would display information pertaining to successful completion of the intake. This would be the time of completion and overview of information entered by the patient.
 d) Estimated in story points - 2
 
-10. 
-Title - Database interface - User check-in notification to Front office staff
+J. 
+a) Title - Database interface - User check-in notification to Front office staff
 b) User story opening sentence - As a patient I want to be able to send an automated notification to the front office staff when I have finished checking in and completed the patient intake forms so that they can review that information, confirm my check-in and pass it along to the doctor.
 c) Additional Details - Once the patient enters all the details, and confirms it by submitting it, the data should be inserted into the database. Once the data is successfully inserted into the database, a notification should be sent to the front office staff.
 d) Estimated in story points - 3
+
+13. URL for Product Backlog : https://www.pivotaltracker.com/projects/2533031
+
+15. 
