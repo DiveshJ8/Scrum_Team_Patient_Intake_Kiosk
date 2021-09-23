@@ -84,4 +84,4 @@ d) Estimated in story points - 3
 
 13. URL for Product Backlog : https://www.pivotaltracker.com/projects/2533031
 
-15. 
+15. The team has agreed upon the following relative size estimate : for user stories with story point 1 the estimate is 10 person hour effort, for story point 2 the estimate is 15 person hour effort and for story point 3 the estimate is 20 person hour effort. 
