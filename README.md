@@ -22,7 +22,7 @@ The user stories are ordered in sequence of actions the user will perform when c
 
 12. Definition Of Ready : 
 A.
-a) Title - User Interface - Sign In Page:
+a) Title Check In Page:
 b) User story opening sentence - As a patient I want to sign in with my email/username for visit/check in to the clinic.
 c) Additional details - The patient will enter in their username and password and submit the information to be able to access the patient intake forms.
 d) Estimated in story points - 1
