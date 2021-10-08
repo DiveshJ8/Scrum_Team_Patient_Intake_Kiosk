@@ -30,7 +30,7 @@ d) Estimated in story points - 1
 B. 
 a) Title - Error message for incorrect data:
 b) User story opening sentence - As a patient if I enter some data which is not in compliance, an error notification should popup so that any data entry related error is rectified at the very beginning of the visit/encounter.
-c) Additional details - This error dialog would be present on all forms and be clearly visible. If validation finds an issue with data inputted by the user such as expired insurance or an 8 digit phone number or invalid email address, the error would specify the faulty data and display in the dialog.
+c) Additional details - This error message would be present on all forms and be clearly visible. If validation finds an issue with data inputted by the user such as expired insurance or an 8 digit phone number or invalid email address, the error would specify the faulty data and display it to the patient.
 d) Estimated in story points - 2
 
 C.
