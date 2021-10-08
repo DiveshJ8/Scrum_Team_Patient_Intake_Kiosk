@@ -34,13 +34,13 @@ c) Additional details - This error dialog would be present on all forms and be c
 d) Estimated in story points - 2
 
 C.
-a) Title - User Interface - Sign up page:
+a) Title - Sign up page:
 b) User story opening sentence - As a patient I want to enter my Sign up details so that I can create my patient profile.
 c) Additional details - The new patient will enter the email/username, create a new password and other required details for having access to the patient intake forms.
 d) Estimated in story points - 1
 
 D.
-a) Title - User Interface - Navigation / progress bar
+a) Title - Progress Indicator
 b) User Story opening sentence - As a patient I want to navigate and view my progress while using the patient intake portal so that I can navigate to another section or return to a section that was not fully filled out.
 c) Additional details - The navigation bar should be able to redirect the user to the desired location in the application and at the same time show the current location while filling the form.
 d) Estimated in Story Points - 2
@@ -53,7 +53,7 @@ c) Additional details :-  The patient will be entering personal details such as 
 d) Estimated in Story Points - 2
 
 F.
-a) Title User Interface - Add Healthcare insurance information
+a) Title - Add Healthcare insurance information
 b) User story opening sentence - As a patient I want to enter my insurance information so that the billing can be charged to the appropriate insurance provider.
 c) Additional details - The patient will enter relevant healthcare insurance information such as group policy number, plan provider, provider contact information, etc.
 d) Estimated in Story Points - 1
@@ -65,7 +65,7 @@ c)Additional Details - The patient will be able to enter the required health rel
 d) Estimated in Story Points - 1
 
 H.
-a) Title - User Interface - Consent & Liability Forms
+a) Title - Consent & Liability Forms
 b) User story opening statement - As a patient I want to provide my consent to the clinic to provide health services that are required so that my treatment can be done.
 c) Additional Details :- The patient will be providing consent for legal purposes so that his/her data shall be stored in the USA.
 d) Estimated in Story Point - 1
@@ -77,9 +77,9 @@ c) Additional details - The confirmation screen would display information pertai
 d) Estimated in story points - 2
 
 J. 
-a) Title - Database interface - User check-in notification to Front office staff
-b) User story opening sentence - As a patient I want to be able to send an automated notification to the front office staff when I have finished checking in and completed the patient intake forms so that they can review that information, confirm my check-in and pass it along to the doctor.
-c) Additional Details - Once the patient enters all the details, and confirms it by submitting it, the data should be inserted into the database. Once the data is successfully inserted into the database, a notification should be sent to the front office staff.
+a) Title - Inform Front office staff regarding check-in
+b) User story opening sentence - As a patient I want the front office staff to know that I have finished checking in and completed the patient intake forms so that they can review that information, confirm my check-in and pass it along to the doctor.
+c) Additional Details - Once the patient enters all the details, and confirms it by submitting it, the data should be saved by the hospital. Once the data is successfully saved the front office staff should be notified.
 d) Estimated in story points - 3
 
 13. URL for Product Backlog : https://www.pivotaltracker.com/projects/2533031
