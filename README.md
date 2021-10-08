@@ -28,7 +28,7 @@ c) Additional details - The patient will enter in their username and password an
 d) Estimated in story points - 1
 
 B. 
-a) Title - User Interface - Error Dialog:
+a) Title - Error message for incorrect data:
 b) User story opening sentence - As a patient if I enter some data which is not in compliance, an error notification should popup so that any data entry related error is rectified at the very beginning of the visit/encounter.
 c) Additional details - This error dialog would be present on all forms and be clearly visible. If validation finds an issue with data inputted by the user such as expired insurance or an 8 digit phone number or invalid email address, the error would specify the faulty data and display in the dialog.
 d) Estimated in story points - 2
@@ -46,7 +46,7 @@ c) Additional details - The navigation bar should be able to redirect the user t
 d) Estimated in Story Points - 2
 
 E.
-a) Title - User Interface - Enter Personal Details:
+a) Title - Enter Personal Details:
 b) User story opening statement :- As a patient I want to enter personal details so that the       
 front office staff can accurately keep records of my personal information.
 c) Additional details :-  The patient will be entering personal details such as gender,    address, contact information, etc.
