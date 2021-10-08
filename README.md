@@ -22,7 +22,7 @@ The user stories are ordered in sequence of actions the user will perform when c
 
 12. Definition Of Ready : 
 A.
-a) Title Check In Page:
+a) Title - Check In Page:
 b) User story opening sentence - As a patient I want to sign in with my email/username for visit/check in to the clinic.
 c) Additional details - The patient will enter in their username and password and submit the information to be able to access the patient intake forms.
 d) Estimated in story points - 1
@@ -59,7 +59,7 @@ c) Additional details - The patient will enter relevant healthcare insurance inf
 d) Estimated in Story Points - 1
 
 G.
-a) Title - User Interface - Add Patient health history information
+a) Title - Add health history information
 b) User story opening sentence - As a patient I want to add personal health history so that there is a record of my vaccinations, medications, past health history, and other relevant information for the doctor to refer to during my visit.
 c)Additional Details - The patient will be able to enter the required health related history which can be used by the doctor for a better treatment.
 d) Estimated in Story Points - 1
@@ -71,7 +71,7 @@ c) Additional Details :- The patient will be providing consent for legal purpose
 d) Estimated in Story Point - 1
 
 I.
-a) Title - User Interface - Confirmation Screen:
+a) Title - Submit required details:
 b) User story opening sentence - As a patient once I am finished I would like to receive a final confirmation screen indicating that I have completed all steps and I am now checked in for my visit.
 c) Additional details - The confirmation screen would display information pertaining to successful completion of the intake. This would be the time of completion and overview of information entered by the patient.
 d) Estimated in story points - 2
