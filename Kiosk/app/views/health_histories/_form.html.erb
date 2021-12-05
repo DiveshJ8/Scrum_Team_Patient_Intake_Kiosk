@@ -11,9 +11,29 @@
     </div>
   <% end %>
 
+<div class="field">
+    <%= form.label :health_history_id %>
+    <%= form.number_field :health_history_id %>
+  </div>
+<div class="field">
+    <%= form.label :patient_id %>
+    <%= form.number_field :patient_id %>
+  </div>
   <div class="field">
     <%= form.label :relation %>
     <%= form.text_field :relation %>
+  </div>
+<div class="field">
+    <%= form.label :status %>
+    <%= form.text_field :status %>
+  </div>
+<div class="field">
+    <%= form.label :value_type %>
+    <%= form.text_field :value_type %>
+  </div>
+<div class="field">
+    <%= form.label :value %>
+    <%= form.text_field :value %>
   </div>
 
   <div class="actions">

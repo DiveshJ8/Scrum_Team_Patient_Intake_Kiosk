@@ -21,18 +21,38 @@ class HealthHistoriesController < ApplicationController
 
   # POST /health_histories or /health_histories.json
   def create
-    @health_history = HealthHistory.new(health_history_params)
+    #@health_history = HealthHistory.new(health_history_params)
 
-    respond_to do |format|
-      if @health_history.save
-        format.html { redirect_to @health_history, notice: "Health history was successfully created." }
-        format.json { render :show, status: :created, location: @health_history }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @health_history.errors, status: :unprocessable_entity }
-      end
+    #respond_to do |format|
+      #if @health_history.save
+        #format.html { redirect_to @health_history, notice: "Health history was successfully created." }
+        #format.json { render :show, status: :created, location: @health_history }
+      #else
+        #format.html { render :new, status: :unprocessable_entity }
+        #format.json { render json: @health_history.errors, status: :unprocessable_entity }
+      #end
+    #end
+    begin
+        HealthHistory.transaction do
+            @hh = HealthHistory.create!(health_history_params)
+        end
+    rescue ActiveRecord::RecordInvalid => exception
+        @bands = {
+            error: {
+                status: 422,
+                message: exception
+            }
+        }
     end
-  end
+  
+        render json: @bands
+    end
+  
+    private
+  
+    def bands_params
+        params.permit(bands: [:name, :year]).require(:bands)
+    end
 
   # PATCH/PUT /health_histories/1 or /health_histories/1.json
   def update

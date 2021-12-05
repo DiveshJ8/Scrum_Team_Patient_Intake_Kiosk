@@ -12,10 +12,45 @@
   <% end %>
 
   <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+ <div class="field">
+    <%= form.label :client_id %>
+    <%= form.number_field :client_id, :value => "1" %>
+  </div>
+  <div class="field">
     <%= form.label :first_name %>
     <%= form.text_field :first_name %>
   </div>
-
+  <div class="field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= form.label :dob %>
+    <%= form.date_select :dob %>
+  </div>
+<div class="field">
+    <%= form.label :street %>
+    <%= form.text_field :street %>
+  </div>
+<div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+<div class="field">
+    <%= form.label :state %>
+    <%= form.text_field :state %>
+  </div>
+<div class="field">
+    <%= form.label :zip %>
+    <%= form.text_field :zip %>
+  </div>
+<div class="field">
+    <%= form.label :phone_no %>
+    <%= form.text_field :phone_no %>
+  </div>
   <div class="actions">
     <%= form.submit %>
   </div>

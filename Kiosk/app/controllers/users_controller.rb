@@ -3,11 +3,21 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
+         	users = User.order('id');
+         	render json: {status: 'Success', message: 'Loaded users', users: users}, status: :ok
     @users = User.all
+   
   end
 
   # GET /users/1 or /users/1.json
   def show
+	user = User.find(params[:id])
+	render json: user, status: :ok
+  end
+
+  def user_details
+	user = User.find(params[:id]);
+	render json: user, status: :ok
   end
 
   # GET /users/new
@@ -64,6 +74,6 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:first_name)
+      params.require(:user).permit(:client_id,:password,:last_login,:first_name,:last_name,:dob,:email,:street,:city,:state,:zip,:phone_no)
     end
 end

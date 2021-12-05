@@ -16,25 +16,35 @@ ActiveRecord::Schema.define(version: 2021_11_22_170146) do
   enable_extension "plpgsql"
 
   create_table "clients", force: :cascade do |t|
-    t.integer "client_id"
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "health_histories", force: :cascade do |t|
-    t.integer "health_history_id"
     t.integer "patient_id"
-    t.string "relation"
-    t.string "status"
-    t.string "value_type"
-    t.string "value"
+    t.string "medications"
+    t.date "tetanus"
+    t.date "flu"
+    t.date "zoster"
+    t.date "pnuemovax"
+    t.date "prevnar"
+    t.boolean "asthma"
+    t.boolean "cancer"
+    t.boolean "depression"
+    t.boolean "diabetes"
+    t.boolean "heart_disease"
+    t.boolean "high_blood_pressure"
+    t.boolean "high_cholesterol"
+    t.boolean "stroke"
+    t.string "other"
+    t.string "surgeries"
+    t.string "family_medical_history"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "patients", force: :cascade do |t|
-    t.integer "patient_id"
     t.integer "user_id"
     t.string "license_no"
     t.string "sex"
@@ -60,7 +70,6 @@ ActiveRecord::Schema.define(version: 2021_11_22_170146) do
   end
 
   create_table "sessions", force: :cascade do |t|
-    t.integer "session_id"
     t.integer "user_id"
     t.datetime "expiration"
     t.datetime "created_at", precision: 6, null: false
@@ -68,7 +77,6 @@ ActiveRecord::Schema.define(version: 2021_11_22_170146) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer "user_id"
     t.integer "client_id"
     t.string "password"
     t.datetime "last_login"
