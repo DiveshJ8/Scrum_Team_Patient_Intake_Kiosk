@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <%= stylesheet_link_tag "mainapp.css" %>
+        <%= stylesheet_link_tag "userdetails.css" %>
+        <%= stylesheet_link_tag "userconsent.css" %>
+        <%= stylesheet_link_tag "userhealth.css" %>
+        <%= stylesheet_link_tag "userinsurance.css" %>
+        <%= stylesheet_link_tag "userreview.css" %>
+        <%= stylesheet_link_tag "progressbar.css" %>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kiosk Checkin</title>
+    </head>
+    <body>
+
+        <header></header>
+        
+        <section class = "progressbar">
+            <%= render partial: "kioskpages/progressbar", :locals => {:progval1 => progval} %>
+        </section>
+        
+        <% if compval[0] == "1" %>
+       
+            <section class = "userpages" id = "userdetails">
+                
+                <%= render partial: "kioskpages/userdetails" %>
+                
+            </section>
+            
+        <% end %>
+        
+        <% if compval[1] == "1" %>
+            
+            <section class = "userpages" id = "userinsurance">
+                <%= render "kioskpages/userdetails" %>
+            </section>
+        <% end %>
+
+        <% if compval[2] == "1" %>
+            <section class = "userpages" id = "userhealth">
+                <%= render "kioskpages/userhealth" %>
+            </section>
+        <% end %>
+
+        <% if compval[3] == "1" %>
+            <section class = "userpages" id = "userconsent">
+                <%= render "kioskpages/userconsent" %>
+            </section>
+        <% end %>
+
+        <% if compval[4] == "1" %>
+            <section class = "userpages" id = "userreview">
+                <%= render "kioskpages/userreview"%>
+            </section>
+        <% end %>
+        
+        
+        
+        
+
+        <%= javascript_pack_tag "mainapp.js" %>
+        <%= javascript_pack_tag "userdetails.js" %>
+        <%= javascript_pack_tag "userconsent.js" %>
+        <%= javascript_pack_tag "userhealth.js" %>
+        <%= javascript_pack_tag "userinsurance.js" %>
+        <%= javascript_pack_tag "userreview.js" %>
+        <%= javascript_pack_tag "progressbar.js" %>
+    </body>
+</html>
