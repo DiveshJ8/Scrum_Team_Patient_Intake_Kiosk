@@ -1,0 +1,99 @@
+<%= form_with(model: patient) do |form| %>
+  <% if patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+        <% patient.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+ <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+ <div class="field">
+    <%= form.label :license_no %>
+    <%= form.text_field :license_no %>
+  </div>
+<div class="field">
+    <%= form.label :sex %>
+    <%= form.text_field :sex %>
+  </div>
+<div class="field">
+    <%= form.label :height %>
+    <%= form.number_field :height %>
+  </div>
+<div class="field">
+    <%= form.label :weight %>
+    <%= form.number_field :weight %>
+  </div>
+<div class="field">
+    <%= form.label :marital_status %>
+    <%= form.text_field :marital_status %>
+  </div>
+<div class="field">
+    <%= form.label :race %>
+    <%= form.text_field :race %>
+  </div>
+<div class="field">
+    <%= form.label :ethnicity %>
+    <%= form.text_field :ethnicity %>
+  </div>
+<div class="field">
+    <%= form.label :income_group %>
+    <%= form.text_field :income_group %>
+  </div>
+<div class="field">
+    <%= form.label :emergency_contact_number %>
+    <%= form.number_field :emergency_contact_number %>
+  </div>
+<div class="field">
+    <%= form.label :emergency_contact_name %>
+    <%= form.text_field :emergency_contact_name %>
+  </div>
+<div class="field">
+    <%= form.label :emergency_contact_address %>
+    <%= form.text_field :emergency_contact_address %>
+  </div>
+<div class="field">
+    <%= form.label :emergency_contact_email %>
+    <%= form.text_field :emergency_contact_email %>
+  </div>
+<div class="field">
+    <%= form.label :rx_group %>
+    <%= form.text_field :rx_group %>
+  </div>
+<div class="field">
+    <%= form.label :rx_bin %>
+    <%= form.text_field :rx_bin %>
+  </div>
+<div class="field">
+    <%= form.label :rx_pcn %>
+    <%= form.text_field :rx_pcn %>
+  </div>
+<div class="field">
+    <%= form.label :blue_button_approval %>
+    <%= form.check_box :blue_button_approval %>
+  </div>
+<div class="field">
+    <%= form.label :visit_detail %>
+    <%= form.text_field :visit_detail %>
+  </div>
+<div class="field">
+    <%= form.label :legal_consent %>
+    <%= form.check_box :legal_consent %>
+  </div>
+<div class="field">
+    <%= form.label :insurance_no %>
+    <%= form.text_field :insurance_no %>
+  </div>
+
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
