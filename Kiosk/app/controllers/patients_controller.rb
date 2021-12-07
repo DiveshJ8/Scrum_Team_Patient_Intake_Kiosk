@@ -14,7 +14,7 @@ class PatientsController < ApplicationController
   # GET /patients/1 or /patients/1.json
   def show
 	patient = Patient.find(params[:id])
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
 
   # GET /patients/new
@@ -66,38 +66,38 @@ class PatientsController < ApplicationController
 
 
   def personalDetails
-	patient = Patient.select(:id,:user_id,:license_no,:sex,:height,:weight,:marital_status,:emergency_contact_number,:emergency_contact_name,:emergency_contact_address,:emergency_contact_email).find(params[:id])
-	render json: patient, status: :ok
+	patient = Patient.select(:id,:user_id,:license_no,:sex,:height,:weight,:marital_status,:emergency_contact_number,:emergency_contact_name,:emergency_contact_address,:emergency_contact_email, :email, :first_name, :last_name, :street, :city, :state, :zip, :phone_no).where(id: params[:id]).joins("INNER JOIN users ON users.id = patients.user_id")
+	render json: {"patient" => patient}, status: :ok
   end
   def insuranceDetails
 	patient = Patient.select(:id,:user_id,:insurance_no,:rx_group,:rx_bin,:rx_pcn).find(params[:id])
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
   def demographicDetails
 	patient = Patient.select(:id,:user_id,:marital_status,:race,:ethnicity,:income_group).find(params[:id])
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
   def blueButton
 	patient = Patient.select(:id,:user_id,:blue_button_approval).find(params[:id])
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
 
 def personalDetailsUpdate
 	patient = Patient.update(patient_params)
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
 
 def demographicDetailsUpdate
 	patient = Patient.update(patient_params)
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
 def insuranceDetailsUpdate
 	patient = Patient.update(patient_params)
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
 def blueButtonUpdate
 	patient = Patient.update(patient_params)
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
 
   private
@@ -108,6 +108,6 @@ def blueButtonUpdate
 
     # Only allow a list of trusted parameters through.
     def patient_params
-      params.permit(:user_id, :license_no, :sex, :height, :weight,:marital_status, :race, :ethnicity,:income_group,:emergency_contact_number, :emergency_contact_name,:emergency_contact_address,:emergency_contact_email, :rx_group, :rx_bin, :rx_pcn, :blue_button_approval, :visit_detail, :legal_consent, :insurance_no)
+      params.require(:patient).permit(:user_id, :license_no, :sex, :height, :weight,:marital_status, :race, :ethnicity,:income_group,:emergency_contact_number, :emergency_contact_name,:emergency_contact_address,:emergency_contact_email, :rx_group, :rx_bin, :rx_pcn, :blue_button_approval, :visit_detail, :legal_consent, :insurance_no)
     end
 end

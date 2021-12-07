@@ -15,5 +15,8 @@ class CreateUsers < ActiveRecord::Migration[6.1]
       t.integer :phone_no
       t.timestamps
     end
+
+    add_foreign_key :users,:clients, column: :client_id
+    add_index :users, :client_id
   end
 end

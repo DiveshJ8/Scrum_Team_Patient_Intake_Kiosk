@@ -11,7 +11,9 @@ class UsersController < ApplicationController
 
   # GET /users/1 or /users/1.json
   def show
-	user = User.find(params[:id])
+	#user = User.find(params[:id])
+	temp = params[:id]
+	user = ActiveRecord::Base.connection.exec_query("select * from users inner join clients as c on c.id = users.client_id where users.id = #{temp}")
 	render json: user, status: :ok
   end
 

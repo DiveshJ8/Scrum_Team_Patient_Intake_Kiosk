@@ -3,11 +3,18 @@ class HealthHistoriesController < ApplicationController
 
   # GET /health_histories or /health_histories.json
   def index
+    health_histories = HealthHistory.all;
+    render json: {status: 'Success', message: 'Loaded health histories', health_histories: health_histories}, status: :ok
     @health_histories = HealthHistory.all
   end
 
   # GET /health_histories/1 or /health_histories/1.json
   def show
+	#if blue button is set to true on patient then fetch from blue button
+	#else fetch from health history table
+	#health_history = HealthHistory.find(params[:id])
+health_history = ActiveRecord::Base.connection.exec_query("select * from health_histories inner join patients as c on c.id = health_histories.patient_id where health_histories.id = #{params[:id]}")
+	render json: health_history, status: :ok
   end
 
   # GET /health_histories/new
@@ -84,6 +91,6 @@ class HealthHistoriesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def health_history_params
-      params.require(:health_history).permit(:relation)
+      params.permit(:patient_id, :medications, :tetanus, :flu, :zoster, :pnuemovax, :prevnar, :asthma, :cancer, :depression, :diabetes, :heart_disease, :high_blood_pressure, :high_cholesterol, :stroke, :other, :surgeries, :family_medical_history)
     end
 end

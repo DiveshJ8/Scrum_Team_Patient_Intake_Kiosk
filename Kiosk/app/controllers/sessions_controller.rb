@@ -64,6 +64,6 @@ class SessionsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def session_params
-      params.require(:session).permit(:session_id, :user_id, :expiration)
+      params.permit(:session_id, :user_id, :expiration)
     end
 end
