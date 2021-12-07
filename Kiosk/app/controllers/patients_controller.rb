@@ -77,6 +77,9 @@ class PatientsController < ApplicationController
 	patient = Patient.select(:id,:user_id,:marital_status,:race,:ethnicity,:income_group).find(params[:id])
 	render json: {"patient" => patient}, status: :ok
   end
+  def currentVisitReason
+	patient = Patient.select(:id,:user_id,:visit_detail).find(params[:id])
+	render json: {"patient" => patient}, status: :ok  end
   def blueButton
 	patient = Patient.select(:id,:user_id,:blue_button_approval).find(params[:id])
 	render json: {"patient" => patient}, status: :ok

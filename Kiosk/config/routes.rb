@@ -22,6 +22,7 @@ get 'user/:id', :to => 'users#user_details'
 get 'intake/:id/personalDetails', :to => 'patients#personalDetails'
 get 'intake/:id/insuranceDetails', :to => 'patients#insuranceDetails'
 get 'intake/:id/demographicDetails', :to => 'patients#demographicDetails'
+get 'intake/:id/currentVisitReason', :to => 'patients#currentVisitReason'
 get 'intake/:id/blueButton', :to => 'patients#blueButton'
 
 patch 'intake/:id/personalDetails', :to => 'patients#personalDetailsUpdate'
