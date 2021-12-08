@@ -1,4 +1,5 @@
 class PatientsController < ApplicationController
+  require 'rest-client'
   before_action :set_patient, only: %i[ show edit update destroy ]
 
   # GET /patients or /patients.json
@@ -82,7 +83,15 @@ class PatientsController < ApplicationController
 	render json: {"patient" => patient}, status: :ok  end
   def blueButton
 	patient = Patient.select(:id,:user_id,:blue_button_approval).find(params[:id])
-	render json: {"patient" => patient}, status: :ok
+	if patient.blue_button_approval == true
+		#fetch data from blue button
+		patient = RestClient.get("https://fierce-ocean-20863.herokuapp.com/patient/entireData")
+		render json: {"patient" => patient}, status: :ok
+	else	
+	patient = Patient.where(id: params[:id]).joins("INNER JOIN health_histories ON health_histories.patient_id = patients.id")
+
+		render json: {"patient" => patient}, status: :ok
+	end
   end
 
 def personalDetailsUpdate

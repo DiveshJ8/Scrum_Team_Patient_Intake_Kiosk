@@ -91,6 +91,6 @@ health_history = ActiveRecord::Base.connection.exec_query("select * from health_
 
     # Only allow a list of trusted parameters through.
     def health_history_params
-      params.permit(:patient_id, :medications, :tetanus, :flu, :zoster, :pnuemovax, :prevnar, :asthma, :cancer, :depression, :diabetes, :heart_disease, :high_blood_pressure, :high_cholesterol, :stroke, :other, :surgeries, :family_medical_history)
+      params.require(:health_history).permit(:patient_id, :medications, :tetanus, :flu, :zoster, :pnuemovax, :prevnar, :asthma, :cancer, :depression, :diabetes, :heart_disease, :high_blood_pressure, :high_cholesterol, :stroke, :other, :surgeries, :family_medical_history)
     end
 end
