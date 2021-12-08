@@ -1,0 +1,44 @@
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2519949502633452540)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2519949502633452540)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-12-07 16:50:51 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/divesh/.rvm/gems/ruby-2.7.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/divesh/.rvm/gems/ruby-2.7.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.5ms | Allocations: 516)
+Completed 200 OK in 42ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 4394)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-07 16:51:05 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/divesh/.rvm/gems/ruby-2.7.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/divesh/.rvm/gems/ruby-2.7.1/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.3ms | Allocations: 228)
+Completed 200 OK in 35ms (Views: 34.4ms | ActiveRecord: 0.0ms | Allocations: 4287)
+
+
+Started GET "/Intake/1/PersonalDetails" for 127.0.0.1 at 2021-12-07 16:53:11 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Intake/1/PersonalDetails"):
+  
+Started GET "/Intake/personalDetails" for 127.0.0.1 at 2021-12-07 16:54:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Intake/personalDetails"):
+  
+Started GET "/Intake/1/personalDetails" for 127.0.0.1 at 2021-12-07 16:54:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/Intake/1/personalDetails"):
+  
+Started GET "/intake/1/personalDetails" for 127.0.0.1 at 2021-12-07 16:55:57 -0500
+Processing by PatientsController#personalDetails as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (1.7ms)[0m  [1m[34mSELECT "patients"."id", "patients"."user_id", "patients"."license_no", "patients"."sex", "patients"."height", "patients"."weight", "patients"."marital_status", "patients"."emergency_contact_number", "patients"."emergency_contact_name", "patients"."emergency_contact_address", "patients"."emergency_contact_email" FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/patients_controller.rb:69:in `personalDetails'
+Completed 404 Not Found in 24ms (ActiveRecord: 9.7ms | Allocations: 6044)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient with 'id'=1):
+  
+app/controllers/patients_controller.rb:69:in `personalDetails'
