@@ -22,27 +22,28 @@ prevPage = () => {
 
 nextPage = () => {
 
-    let dataIn = {
-        insur_no: insur_no,
-        rxbin: rxbin,
-        rxpcn: rxpcn,
-        rxgroup: rxgroup,
+    let dataIn = {patient:{
+        insurance_no: insur_no,
+        rx_bin: rxbin,
+        rx_pcn: rxpcn,
+        rx_group: rxgroup,
         insurance: insurance,
         provider: provider,
         priority: priority
-    }
+    }}
 
-    /*
-    fetch('/insurances/up_userinsurance',{
-        method:"POST",
-        mode:"cors",
+    fetch('/patients',{
+        method:"PATCH",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
         cache:"no-cache",
         body:JSON.stringify(dataIn)
     })
     .then(responseIn => responseIn.text())
     .then(dataIn => console.log(dataIn))
     .catch(err => console.log(err))
-    */
 
     location.href = "/userhealth"
 
