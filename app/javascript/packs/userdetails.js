@@ -7,7 +7,6 @@ street = document.getElementById('street')
 city = document.getElementById('city')
 state = document.getElementById('state')
 zip = document.getElementById('zip')
-dob = document.getElementById('dob')
 phone = document.getElementById('phone')
 
 goBack = () => {
@@ -23,7 +22,6 @@ submitInfo = () => {
         city:city.value,
         state:state.value,
         zip:zip.value,
-        dob:dob.value,
         phone:phone.value,
         usetype:"Patient"
     } 
