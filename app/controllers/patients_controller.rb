@@ -117,6 +117,6 @@ def blueButtonUpdate
 
     # Only allow a list of trusted parameters through.
     def patient_params
-      params.permit(:user_id, :license_no, :sex, :height, :weight,:marital_status, :race, :ethnicity,:income_group,:emergency_contact_number, :emergency_contact_name,:emergency_contact_address,:emergency_contact_email, :rx_group, :rx_bin, :rx_pcn, :blue_button_approval, :visit_detail, :legal_consent, :insurance_no)
+      params.require(:patient).permit(:user_id, :license_no, :sex, :height, :weight,:marital_status, :race, :ethnicity,:income_group,:emergency_contact_number, :emergency_contact_name,:emergency_contact_address,:emergency_contact_email, :rx_group, :rx_bin, :rx_pcn, :blue_button_approval, :visit_detail, :legal_consent, :insurance_no)
     end
 end
