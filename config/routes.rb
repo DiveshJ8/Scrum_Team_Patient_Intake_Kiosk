@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-root to: redirect("https://patient-login-main.herokuapp.com/")
-
   get '/userdetails', to: 'kioskpages#userdetails'
   get '/userinsurance', to: 'kioskpages#userinsurance'
   get '/userconsent', to: 'kioskpages#userconsent'
@@ -22,6 +20,8 @@ post 'healthinsurances', to: 'healthinsurance#create'
   
 
 get 'user/:id', :to => 'users#user_details'
+#get '/', :to => 'users#home'
+
 get 'intake/:id/personalDetails', :to => 'patients#personalDetails'
 get 'intake/:id/insuranceDetails', :to => 'patients#insuranceDetails'
 get 'intake/:id/demographicDetails', :to => 'patients#demographicDetails'
@@ -34,7 +34,7 @@ patch 'intake/:id/blueButton', :to => 'patients#blueButtonUpdate'
 
 delete 'intake/:patient_id', :to => 'patients#destroy'
 
-root to: "https://patient-login-main.herokuapp.com/"
+root to: redirect("https://patient-login-main.herokuapp.com/")
 
 
   resources :sessions
