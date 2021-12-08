@@ -11,7 +11,7 @@ dob = document.getElementById('dob')
 phone = document.getElementById('phone')
 
 goBack = () => {
-    location.href = "/signin"
+    location.href = "https://patient-login.herokuapp.com/sign_in"
 }
 
 
