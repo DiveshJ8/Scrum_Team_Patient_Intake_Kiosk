@@ -19,7 +19,7 @@ patientId = urlParams.get('patientId');
 
 
 submitInfo = () => {
-    let data = {
+    let data = {patient:{
     	client_id:'1',
         first_name:fname.value,
         last_name:fname.value,
@@ -29,18 +29,11 @@ submitInfo = () => {
         zip:zip.value,
         phone_no:phone.value
         //usetype:"Patient"
-    } 
+    } }
     
-    $.ajax({
-   url: '/users',
-   type: 'post',
-   data: JSON.stringify(data),
-   success: function(response){
-	location.href = "/userinsurance?patientId=${patientId}"
-   }
-});
-    /*
-    fetch('/users/up_personaldetails',{
+console.log(JSON.stringify(data));
+
+    fetch('/users',{
         method:"POST",
         mode:"cors",
         cache:"no-cache",
@@ -49,7 +42,7 @@ submitInfo = () => {
     .then(responseIn => responseIn.text())
     .then(dataIn => console.log(dataIn))
     .catch(err => console.log(err))
-*/
+
     location.href = "/userinsurance"
     
 
