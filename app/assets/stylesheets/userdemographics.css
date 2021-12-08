@@ -31,6 +31,47 @@ body{
     align-items: center;
 }
 
+.rowinput{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap:1rem;
+    width: 100%;
+    height: 10%;
+    padding: 0 2rem;
+    margin-top: 1rem;
+    
+}
+
+.fieldname{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.fieldname.alias{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.fieldname h3{
+    height: 40%;
+    display: flex;
+
+    align-items: center;
+}
+
+.fieldname input{
+        height: 60%;
+}
+
 .formbox{
    display: flex;
    
