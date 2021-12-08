@@ -19,7 +19,7 @@ patientId = urlParams.get('patientId');
 
 
 submitInfo = () => {
-    let data = {patient:{
+    let data = {user:{
     	client_id:'1',
         first_name:fname.value,
         last_name:fname.value,
