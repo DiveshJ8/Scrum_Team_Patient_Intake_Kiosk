@@ -8,7 +8,7 @@ class PatientsController < ApplicationController
   end
 
   def patient_details
-	patients = Patient.order('id');
+	patients = ActiveRecord::Base.connection.exec_query("select patients.id, c.first_name, c.last_name from patients inner join users as c on c.id = patients.user_id")
     	render json: {status: 'Success', message: 'Loaded patients', patients: patients}, status: :ok
   end
 

@@ -3,11 +3,14 @@ class HealthHistoriesController < ApplicationController
 
   # GET /health_histories or /health_histories.json
   def index
-    @health_histories = HealthHistory.all
+    health_histories = HealthHistory.all
+    render json: {status: 'Success', message: 'Loaded health histories', health_history: health_histories}, status: :ok
   end
 
   # GET /health_histories/1 or /health_histories/1.json
   def show
+	health_history = HealthHistory.find(params[:id])
+	render json: {status: 'Success', message: 'Loaded health history', health_history: health_history}, status: :ok
   end
 
   # GET /health_histories/new

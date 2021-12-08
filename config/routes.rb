@@ -22,6 +22,7 @@ post 'healthinsurances', to: 'healthinsurance#create'
 get 'user/:id', :to => 'users#user_details'
 #get '/', :to => 'users#home'
 
+get '/patientDetails', :to => 'patients#patient_details'
 get 'intake/:id/personalDetails', :to => 'patients#personalDetails'
 get 'intake/:id/insuranceDetails', :to => 'patients#insuranceDetails'
 get 'intake/:id/demographicDetails', :to => 'patients#demographicDetails'
