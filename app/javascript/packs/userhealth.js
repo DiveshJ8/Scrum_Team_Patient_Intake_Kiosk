@@ -27,29 +27,32 @@ goBack = () => {
 goNext = () => {
 
 
-    let data = {
-        prevna: prevna.value,
+    let data = {health_history:{
+        prevnar: prevna.value,
         flu: flu.value,
         zoster:zost.value,
-        pneu:pneu.value,
-        teta:teta.value,
-        famtext: famtext.value,
-        surgtext: surgtext.value,
+        pneumovax:pneu.value,
+        tetanus:teta.value,
+        family_medical_history: famtext.value,
+        surgeries: surgtext.value,
         medications: medic.value,
         asthma: asth.value,
         cancer: canc.value,
         diabetes: diab.value,
-        heartdisease: hd.value,
-        highblood: hblood.value,
-        highcholesterol:highc.value,
+        heart_disease: hd.value,
+        high_blood_pressure: hblood.value,
+        high_cholesterol:highc.value,
         stroke:stroke.value 
 
-    }
+    }}
 
-    /*
-    fetch("url", {
-        method:"POST",
-        mode: "cors",
+
+    fetch("/health_histories", {
+        method:"PATCH",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
         cache: "no-cache",
         headers: {
             'Content-Type': 'application/json'
@@ -60,8 +63,7 @@ goNext = () => {
     .then(responseIn => responseIn.text())
     .then(dataIn => {
         console.log(dataIn)
-    })  
-    */
+    })
 
     location.href = "/userconsent"
     backbtn.removeEventListener('click', goBack);

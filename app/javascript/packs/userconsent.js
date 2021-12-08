@@ -45,17 +45,19 @@ checked = () => {
 
 submitInfo = () => {
     
-    /*
-    fetch('/demographics/up_demographicdetails',{
-        method:"POST",
-        mode:"cors",
+
+    fetch('/patients',{
+        method:"PATCH",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
         cache:"no-cache",
         body:JSON.stringify(data)
     })
     .then(responseIn => responseIn.text())
     .then(dataIn => console.log(dataIn))
     .catch(err => console.log(err))
-    */
     location.href = "/userdemographics"
 
     submitbtn.removeEventListener('click', submitInfo);

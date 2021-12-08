@@ -27,7 +27,6 @@ nextPage = () => {
         rx_bin: rxbin,
         rx_pcn: rxpcn,
         rx_group: rxgroup,
-        insurance: insurance,
         provider: provider,
         priority: priority
     }}

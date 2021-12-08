@@ -26,29 +26,31 @@ goBack = () =>{
 
 
 submitInfo = () => {
-    let data = {
-        dob:dob.value,
+    let data = {patient:{
         gender:gender.value,
-        marital:marital.value,
+        marital_status:marital.value,
         race:race.value,
-        ethinicity:ethinicity.value,
-        income:income.value,
-        ephone:ephone.value,
-        econtact:econtact.value,
-        eemail:eemail.value,
-        eaddress:eaddress.value
-    } 
-    /*
-    fetch('/demographics/up_demographicdetails',{
-        method:"POST",
-        mode:"cors",
+        ethnicity:ethinicity.value,
+        income_group:income.value,
+        emergency_contact_number:ephone.value,
+        emergency_contact_name:econtact.value,
+        emergency_contact_email:eemail.value,
+        emergency_contact_address:eaddress.value
+    } }
+    let data2 = {user:{dob:dob.value,}}
+    fetch('/patients/${patient_id}',{
+        method:"PATCH",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
         cache:"no-cache",
         body:JSON.stringify(data)
     })
     .then(responseIn => responseIn.text())
     .then(dataIn => console.log(dataIn))
     .catch(err => console.log(err))
-    */
+
     location.href = "https://patient-login.herokuapp.com/sign_in"
 
     submitbtn.removeEventListener('click', submitInfo);
