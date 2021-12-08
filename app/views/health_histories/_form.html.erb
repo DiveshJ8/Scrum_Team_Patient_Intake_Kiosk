@@ -1,0 +1,89 @@
+<%= form_with(model: health_history) do |form| %>
+  <% if health_history.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(health_history.errors.count, "error") %> prohibited this health_history from being saved:</h2>
+
+      <ul>
+        <% health_history.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+    <%= form.label :patient_id %>
+    <%= form.number_field :patient_id %>
+  </div>
+  <div class="field">
+    <%= form.label :medications %>
+    <%= form.text_field :medications %>
+  </div>
+<div class="field">
+    <%= form.label :tetanus %>
+    <%= form.date_select :tetanus %>
+  </div>
+<div class="field">
+    <%= form.label :flu %>
+    <%= form.date_select :flu %>
+  </div>
+<div class="field">
+    <%= form.label :zoster %>
+    <%= form.date_select :zoster %>
+  </div>
+<div class="field">
+    <%= form.label :pnuemovax %>
+    <%= form.date_select :pnuemovax %>
+  </div>
+<div class="field">
+    <%= form.label :prevnar %>
+    <%= form.date_select :prevnar %>
+  </div>
+<div class="field">
+    <%= form.label :asthma %>
+    <%= form.check_box :asthma %>
+  </div>
+<div class="field">
+    <%= form.label :cancer %>
+    <%= form.check_box :cancer %>
+  </div>
+<div class="field">
+    <%= form.label :depression %>
+    <%= form.check_box :depression %>
+  </div>
+<div class="field">
+    <%= form.label :diabetes %>
+    <%= form.check_box :diabetes %>
+  </div>
+<div class="field">
+    <%= form.label :heart_disease %>
+    <%= form.check_box :heart_disease %>
+  </div>
+<div class="field">
+    <%= form.label :high_blood_pressure %>
+    <%= form.check_box :high_blood_pressure %>
+  </div>
+<div class="field">
+    <%= form.label :high_cholesterol %>
+    <%= form.check_box :high_cholesterol %>
+  </div>
+<div class="field">
+    <%= form.label :stroke %>
+    <%= form.check_box :stroke %>
+  </div>
+<div class="field">
+    <%= form.label :other %>
+    <%= form.text_field :other %>
+  </div>
+<div class="field">
+    <%= form.label :surgeries %>
+    <%= form.text_field :surgeries %>
+  </div>
+<div class="field">
+    <%= form.label :family_medical_history %>
+    <%= form.text_field :family_medical_history %>
+  </div>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
