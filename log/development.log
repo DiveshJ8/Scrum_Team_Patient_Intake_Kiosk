@@ -42,3 +42,243 @@ Completed 404 Not Found in 24ms (ActiveRecord: 9.7ms | Allocations: 6044)
 ActiveRecord::RecordNotFound (Couldn't find Patient with 'id'=1):
   
 app/controllers/patients_controller.rb:69:in `personalDetails'
+Started GET "/health_histories" for 127.0.0.1 at 2021-12-07 20:21:35 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/Users/Abhay/Projects/CS673/Scrum_Team_Patient_Intake_Kiosk/app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+...lth_history_params      params.require(:health_history).perm...
+...                              ^
+/Users/Abhay/Projects/CS673/Scrum_Team_Patient_Intake_Kiosk/app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+Started GET "/health_histories" for 127.0.0.1 at 2021-12-07 20:21:53 -0500
+  
+SyntaxError (/Users/Abhay/Projects/CS673/Scrum_Team_Patient_Intake_Kiosk/app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+...lth_history_params      params.require(:health_histories).pe...
+...                              ^
+/Users/Abhay/Projects/CS673/Scrum_Team_Patient_Intake_Kiosk/app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+Started GET "/health_histories" for 127.0.0.1 at 2021-12-07 20:22:20 -0500
+  
+SyntaxError (/Users/Abhay/Projects/CS673/Scrum_Team_Patient_Intake_Kiosk/app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+...lth_history_params      params.require(:healthhistory).permi...
+...                              ^
+/Users/Abhay/Projects/CS673/Scrum_Team_Patient_Intake_Kiosk/app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+Started GET "/health_histories" for 127.0.0.1 at 2021-12-07 20:23:27 -0500
+  
+SyntaxError (/Users/Abhay/Projects/CS673/Scrum_Team_Patient_Intake_Kiosk/app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+...lth_history_params      params.require(:health_history).perm...
+...                              ^
+/Users/Abhay/Projects/CS673/Scrum_Team_Patient_Intake_Kiosk/app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+Started GET "/health_histories" for 127.0.0.1 at 2021-12-07 20:24:29 -0500
+  
+SyntaxError (/Users/Abhay/Projects/CS673/Scrum_Team_Patient_Intake_Kiosk/app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+...lth_history_params      params.permit(:patient_id, :medicati...
+...                              ^
+/Users/Abhay/Projects/CS673/Scrum_Team_Patient_Intake_Kiosk/app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+app/controllers/health_histories_controller.rb:86: syntax error, unexpected '.', expecting ';' or '\n'
+app/controllers/health_histories_controller.rb:89: syntax error, unexpected end, expecting end-of-input
+Started GET "/health_histories" for 127.0.0.1 at 2021-12-07 20:24:56 -0500
+Processing by HealthHistoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering health_histories/index.html.erb within layouts/application
+  [1m[36mHealthHistory Load (2.5ms)[0m  [1m[34mSELECT "health_histories".* FROM "health_histories"[0m
+  ↳ app/views/health_histories/index.html.erb:14
+  Rendered health_histories/index.html.erb within layouts/application (Duration: 36.6ms | Allocations: 17423)
+  Rendered layout layouts/application.html.erb (Duration: 36.8ms | Allocations: 17493)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 15.6ms | Allocations: 24583)
+
+
+  
+ActionView::Template::Error (undefined method `relation' for #<HealthHistory:0x00007fdeda904988>):
+    13:   <tbody>
+    14:     <% @health_histories.each do |health_history| %>
+    15:       <tr>
+    16:         <td><%= health_history.relation %></td>
+    17:         <td><%= link_to 'Show', health_history %></td>
+    18:         <td><%= link_to 'Edit', edit_health_history_path(health_history) %></td>
+    19:         <td><%= link_to 'Destroy', health_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
+app/views/health_histories/index.html.erb:16
+app/views/health_histories/index.html.erb:14
+Started GET "/health_histories" for 127.0.0.1 at 2021-12-07 20:25:54 -0500
+Processing by HealthHistoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering health_histories/index.html.erb within layouts/application
+  [1m[36mHealthHistory Load (2.2ms)[0m  [1m[34mSELECT "health_histories".* FROM "health_histories"[0m
+  ↳ app/views/health_histories/index.html.erb:14
+  Rendered health_histories/index.html.erb within layouts/application (Duration: 24.8ms | Allocations: 4658)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 4728)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 2.2ms | Allocations: 8478)
+
+
+  
+ActionView::Template::Error (undefined method `relation' for #<HealthHistory:0x00007fdf082bd218>):
+    13:   <tbody>
+    14:     <% @health_histories.each do |health_history| %>
+    15:       <tr>
+    16:         <td><%= health_history.relation %></td>
+    17:         <td><%= link_to 'Show', health_history %></td>
+    18:         <td><%= link_to 'Edit', edit_health_history_path(health_history) %></td>
+    19:         <td><%= link_to 'Destroy', health_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
+app/views/health_histories/index.html.erb:16
+app/views/health_histories/index.html.erb:14
+Started GET "/health_histories" for 127.0.0.1 at 2021-12-07 20:25:57 -0500
+Processing by HealthHistoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering health_histories/index.html.erb within layouts/application
+  [1m[36mHealthHistory Load (2.5ms)[0m  [1m[34mSELECT "health_histories".* FROM "health_histories"[0m
+  ↳ app/views/health_histories/index.html.erb:14
+  Rendered health_histories/index.html.erb within layouts/application (Duration: 22.1ms | Allocations: 4414)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 4484)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 2.5ms | Allocations: 7484)
+
+
+  
+ActionView::Template::Error (undefined method `relation' for #<HealthHistory:0x00007fdf085cfe60>):
+    13:   <tbody>
+    14:     <% @health_histories.each do |health_history| %>
+    15:       <tr>
+    16:         <td><%= health_history.relation %></td>
+    17:         <td><%= link_to 'Show', health_history %></td>
+    18:         <td><%= link_to 'Edit', edit_health_history_path(health_history) %></td>
+    19:         <td><%= link_to 'Destroy', health_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
+app/views/health_histories/index.html.erb:16
+app/views/health_histories/index.html.erb:14
+Started GET "/health_histories" for 127.0.0.1 at 2021-12-07 20:26:35 -0500
+Processing by HealthHistoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering health_histories/index.html.erb within layouts/application
+  [1m[36mHealthHistory Load (2.1ms)[0m  [1m[34mSELECT "health_histories".* FROM "health_histories"[0m
+  ↳ app/views/health_histories/index.html.erb:14
+  Rendered health_histories/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 1432)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /Users/Abhay/Projects/CS673/Scrum_Team_Patient_Intake_Kiosk/public/packs
+[Webpacker] Hash: ac18fd6aa1885dbb8927
+Version: webpack 4.46.0
+Time: 1259ms
+Built at: 12/07/2021 8:26:38 PM
+                                       Asset      Size         Chunks                         Chunk Names
+      js/application-e421b4aa3f716bebdab1.js   125 KiB    application  [emitted] [immutable]  application
+  js/application-e421b4aa3f716bebdab1.js.map   139 KiB    application  [emitted] [dev]        application
+          js/mainapp-da2e2a61c945a1c256a7.js  3.87 KiB        mainapp  [emitted] [immutable]  mainapp
+      js/mainapp-da2e2a61c945a1c256a7.js.map  3.52 KiB        mainapp  [emitted] [dev]        mainapp
+      js/progressbar-3253a3f82350684992e8.js  4.41 KiB    progressbar  [emitted] [immutable]  progressbar
+  js/progressbar-3253a3f82350684992e8.js.map  4.21 KiB    progressbar  [emitted] [dev]        progressbar
+           js/signin-53b8b9ea569b63cee51c.js  3.87 KiB         signin  [emitted] [immutable]  signin
+       js/signin-53b8b9ea569b63cee51c.js.map  3.52 KiB         signin  [emitted] [dev]        signin
+           js/signup-5bf03f37e8dcdc52f396.js  3.87 KiB         signup  [emitted] [immutable]  signup
+       js/signup-5bf03f37e8dcdc52f396.js.map  3.52 KiB         signup  [emitted] [dev]        signup
+      js/userconsent-2de988058156dbec72dd.js   5.8 KiB    userconsent  [emitted] [immutable]  userconsent
+  js/userconsent-2de988058156dbec72dd.js.map  5.65 KiB    userconsent  [emitted] [dev]        userconsent
+      js/userdetails-b5ac6865f2c4f30f9e1d.js  5.28 KiB    userdetails  [emitted] [immutable]  userdetails
+  js/userdetails-b5ac6865f2c4f30f9e1d.js.map  5.13 KiB    userdetails  [emitted] [dev]        userdetails
+       js/userhealth-f9704c431fc1d4b83fb2.js  3.89 KiB     userhealth  [emitted] [immutable]  userhealth
+   js/userhealth-f9704c431fc1d4b83fb2.js.map  3.52 KiB     userhealth  [emitted] [dev]        userhealth
+    js/userinsurance-42e6f13b8d3e0ddc4fc4.js  5.38 KiB  userinsurance  [emitted] [immutable]  userinsurance
+js/userinsurance-42e6f13b8d3e0ddc4fc4.js.map  5.17 KiB  userinsurance  [emitted] [dev]        userinsurance
+       js/userreview-9406c075fc545eb1ab6b.js  3.89 KiB     userreview  [emitted] [immutable]  userreview
+   js/userreview-9406c075fc545eb1ab6b.js.map  3.52 KiB     userreview  [emitted] [dev]        userreview
+                               manifest.json  3.24 KiB                 [emitted]              
+Entrypoint application = js/application-e421b4aa3f716bebdab1.js js/application-e421b4aa3f716bebdab1.js.map
+Entrypoint mainapp = js/mainapp-da2e2a61c945a1c256a7.js js/mainapp-da2e2a61c945a1c256a7.js.map
+Entrypoint progressbar = js/progressbar-3253a3f82350684992e8.js js/progressbar-3253a3f82350684992e8.js.map
+Entrypoint signin = js/signin-53b8b9ea569b63cee51c.js js/signin-53b8b9ea569b63cee51c.js.map
+Entrypoint signup = js/signup-5bf03f37e8dcdc52f396.js js/signup-5bf03f37e8dcdc52f396.js.map
+Entrypoint userconsent = js/userconsent-2de988058156dbec72dd.js js/userconsent-2de988058156dbec72dd.js.map
+Entrypoint userdetails = js/userdetails-b5ac6865f2c4f30f9e1d.js js/userdetails-b5ac6865f2c4f30f9e1d.js.map
+Entrypoint userhealth = js/userhealth-f9704c431fc1d4b83fb2.js js/userhealth-f9704c431fc1d4b83fb2.js.map
+Entrypoint userinsurance = js/userinsurance-42e6f13b8d3e0ddc4fc4.js js/userinsurance-42e6f13b8d3e0ddc4fc4.js.map
+Entrypoint userreview = js/userreview-9406c075fc545eb1ab6b.js js/userreview-9406c075fc545eb1ab6b.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./app/javascript/packs/mainapp.js] 0 bytes {mainapp} [built]
+[./app/javascript/packs/progressbar.js] 530 bytes {progressbar} [built]
+[./app/javascript/packs/signin.js] 0 bytes {signin} [built]
+[./app/javascript/packs/signup.js] 0 bytes {signup} [built]
+[./app/javascript/packs/userconsent.js] 1.9 KiB {userconsent} [built]
+[./app/javascript/packs/userdetails.js] 1.39 KiB {userdetails} [built]
+[./app/javascript/packs/userhealth.js] 0 bytes {userhealth} [built]
+[./app/javascript/packs/userinsurance.js] 1.47 KiB {userinsurance} [built]
+[./app/javascript/packs/userreview.js] 0 bytes {userreview} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 2906.1ms | Allocations: 79331)
+Completed 200 OK in 2916ms (Views: 2907.9ms | ActiveRecord: 2.1ms | Allocations: 83111)
+
+
+Started GET "/health_histories/1/edit" for 127.0.0.1 at 2021-12-07 20:26:51 -0500
+Processing by HealthHistoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHealthHistory Load (2.3ms)[0m  [1m[34mSELECT "health_histories".* FROM "health_histories" WHERE "health_histories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/health_histories_controller.rb:82:in `set_health_history'
+  Rendering layout layouts/application.html.erb
+  Rendering health_histories/edit.html.erb within layouts/application
+  Rendered health_histories/_form.html.erb (Duration: 38.2ms | Allocations: 14145)
+  Rendered health_histories/edit.html.erb within layouts/application (Duration: 40.3ms | Allocations: 14557)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.9ms | Allocations: 19371)
+Completed 200 OK in 75ms (Views: 45.6ms | ActiveRecord: 3.5ms | Allocations: 21812)
+
+
+Started GET "/health_histories/1" for 127.0.0.1 at 2021-12-07 20:27:02 -0500
+Processing by HealthHistoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHealthHistory Load (2.4ms)[0m  [1m[34mSELECT "health_histories".* FROM "health_histories" WHERE "health_histories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/health_histories_controller.rb:82:in `set_health_history'
+  Rendering layout layouts/application.html.erb
+  Rendering health_histories/show.html.erb within layouts/application
+  Rendered health_histories/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 283)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5098)
+Completed 200 OK in 21ms (Views: 13.2ms | ActiveRecord: 2.4ms | Allocations: 6516)
+
+
+Started GET "/health_histories/1/edit" for 127.0.0.1 at 2021-12-07 20:27:04 -0500
+Processing by HealthHistoriesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mHealthHistory Load (1.6ms)[0m  [1m[34mSELECT "health_histories".* FROM "health_histories" WHERE "health_histories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/health_histories_controller.rb:82:in `set_health_history'
+  Rendering layout layouts/application.html.erb
+  Rendering health_histories/edit.html.erb within layouts/application
+  Rendered health_histories/_form.html.erb (Duration: 15.5ms | Allocations: 7562)
+  Rendered health_histories/edit.html.erb within layouts/application (Duration: 30.2ms | Allocations: 8222)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 13166)
+Completed 200 OK in 48ms (Views: 39.3ms | ActiveRecord: 1.6ms | Allocations: 14297)
+
+

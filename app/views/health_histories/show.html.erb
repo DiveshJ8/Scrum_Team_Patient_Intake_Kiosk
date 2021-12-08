@@ -2,7 +2,9 @@
 
 <p>
   <strong>Relation:</strong>
-  <%= @health_history.relation %>
+  <%= @health_history.id %>
+  <%= @health_history.patient_id %>
+
 </p>
 
 <%= link_to 'Edit', edit_health_history_path(@health_history) %> |

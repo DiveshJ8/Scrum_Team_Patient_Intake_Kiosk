@@ -13,7 +13,8 @@
   <tbody>
     <% @health_histories.each do |health_history| %>
       <tr>
-        <td><%= health_history.relation %></td>
+        <td><%= health_history.id %></td>
+        <td><%= health_history.patient_id %></td>
         <td><%= link_to 'Show', health_history %></td>
         <td><%= link_to 'Edit', edit_health_history_path(health_history) %></td>
         <td><%= link_to 'Destroy', health_history, method: :delete, data: { confirm: 'Are you sure?' } %></td>
