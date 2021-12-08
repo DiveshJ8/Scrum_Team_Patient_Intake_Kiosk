@@ -43,7 +43,7 @@ console.log(JSON.stringify(data));
     .then(dataIn => console.log(dataIn))
     .catch(err => console.log(err))
 
-    location.href = "/userinsurance"
+    /*location.href = "/userinsurance"*/
     
 
     nextbtn.removeEventListener('click', submitInfo);
