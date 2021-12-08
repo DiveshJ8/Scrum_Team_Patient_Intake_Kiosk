@@ -35,7 +35,7 @@ console.log(JSON.stringify(data));
 
     fetch('/users',{
         method:"POST",
-        mode:"cors",
+        headers: {'Accept': 'application/json', 'Content-Type':'application/json'},
         cache:"no-cache",
         body:JSON.stringify(data)
     })
