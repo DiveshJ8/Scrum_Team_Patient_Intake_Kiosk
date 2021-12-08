@@ -44,7 +44,7 @@ checked = () => {
 }
 
 submitInfo = () => {
-}
+
 
     /*
     fetch('/patients',{
@@ -66,7 +66,7 @@ submitInfo = () => {
     submitbtn.removeEventListener('click', submitInfo);
     agree.removeEventListener('click', checkAgree);
     disagree.removeEventListener('click', checkDisagree);
-    backbtn.addEventListener('click', goBack);
+    backbtn.removeEventListener('click', goBack);
 
 }
 
