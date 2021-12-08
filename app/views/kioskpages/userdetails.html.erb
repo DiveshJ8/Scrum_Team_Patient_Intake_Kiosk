@@ -8,12 +8,12 @@
         
             <section class = "formsection" id = "formsection">
                 <div class = "titlediv" id = "titlediv">
-                   <select>
+                   <select onChange="window.location.href=this.value">
                         <option value="none">Select a Page</option>
-                        <option value="Patient Health"><a href = "kioskpages/userhealth">Patient Info</a></option>
-                        <option value="Patient Health"><a href = "kioskpages/userinsurance">Patient Insurance</a></option>
-                        <option value="Patient Health">Patient Health</option>
-                        <option value="Patient Health"><a href = "kioskpages/consent">Patient Consent</a></option>
+                        <option value="kioskpages/userdetails">Patient Info</option>
+                        <option value="kioskpages/userinsurance">Patient Insurance</option>
+                        <option value="kioskpages/userhealth">Patient Health</option>
+                        <option value="kioskpages/userconsent">Patient Consent</option>
                     </select>
                 </div>  
                 <section class = "progressbar_main">
