@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <%= stylesheet_link_tag "userdemographics.css" %>
+        <%= stylesheet_link_tag "progressbar.css" %>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        
+            <section class = "formsection" id = "formsection">
+                <div class = "titlediv" id = "titlediv"> Patient Demographics
+                   <select onChange="window.location.href=this.value">
+                        <option value="none">Select a Page</option>
+                        <option value="/userdetails">Patient Info</option>
+                        <option value="/userinsurance">Patient Insurance</option>
+                        <option value="/userhealth">Patient Health</option>
+                        <option value="/userconsent">Patient Consent</option>
+                        <option value="/userdemographics">Patient Demographics</option>
+                    </select>
+                </div>  
+                <section class = "progressbar_main">
+                    <%= render partial: "kioskpages/progressbar", :locals => {:progval1 => "11111"} %>
+                </section>
+                
+                <div class = "rowinput">
+                    <div class = "fieldname alias">
+                        <h3>Name *</h3>
+                        <input type = "text" id = "fname" placeholder="First" id = "fname" />   
+                    </div>
+                    <div class = "fieldname">
+                        <input type = "text" id = "lname" placeholder="Last" id = "lname" />
+                    </div>
+                </div>  
+                <div class = "rowinput">
+                    <div class = "fieldname alias">
+                        <h3>Street *</h3>
+                        <input type = "text" id = "street" placeholder="Street" />
+                    </div>
+                </div>
+                <div class = "rowinput">
+                    <div class = "fieldname alias">
+                        <h3>City *</h3>
+                        <input type = "text" id = "city" placeholder="City" />
+                    </div>
+                    <div class = "fieldname alias">
+                        <h3>State *</h3>
+                        <input type = "text" id = "state" placeholder="State" />
+                    </div>
+                    <div class = "fieldname alias">
+                        <h3>Zip *</h3>
+                        <input type = "text" id = "zip" placeholder="Zip" />
+                    </div>
+                </div> 
+                
+                <div class = "rowinput">
+                    <div class = "fieldname alias">
+                        <h3>DOB *</h3>
+                        
+                        <input type = "text" id = "dob" placeholder="DOB" />
+                    </div>
+                    <div class = "fieldname alias">
+                        <h3>Phone *</h3>
+                        
+                        <input type = "text" id = "phone" placeholder="Phone" />
+                    </div>
+                </div>   
+                <div class = "submitbtn">
+                    <button id = "back">Signin</button>
+                    <button id = "next">Next</button>
+                </div>  
+            </section>
+        
+            
+            <%= javascript_pack_tag "userdemographics.js" %>
+            
+    </body>
+</html>
+
+
+
+

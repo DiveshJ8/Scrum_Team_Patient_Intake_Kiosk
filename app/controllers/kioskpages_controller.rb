@@ -32,6 +32,9 @@ class KioskpagesController < ApplicationController
 
     def userhealth    
     end
+
+    def userdemographics
+    end
     '''
     def userreview
         origin_type = #read url origin header
