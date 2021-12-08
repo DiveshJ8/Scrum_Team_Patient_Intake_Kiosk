@@ -13,18 +13,32 @@ goBack = () => {
     location.href = "https://patient-login.herokuapp.com/sign_in"
 }
 
+queryString = window.location.search;
+urlParams = new URLSearchParams(queryString);
+patientId = urlParams.get('patientId');
+
 
 submitInfo = () => {
     let data = {
-        fname:fname.value,
-        lname:fname.value,
+    	client_id:'1',
+        first_name:fname.value,
+        last_name:fname.value,
         street:street.value,
         city:city.value,
         state:state.value,
         zip:zip.value,
-        phone:phone.value,
-        usetype:"Patient"
+        phone_no:phone.value
+        //usetype:"Patient"
     } 
+    
+    $.ajax({
+   url: '/users',
+   type: 'post',
+   data: JSON.stringify(data),
+   success: function(response){
+	location.href = "/userinsurance?patientId=${patientId}"
+   }
+});
     /*
     fetch('/users/up_personaldetails',{
         method:"POST",
