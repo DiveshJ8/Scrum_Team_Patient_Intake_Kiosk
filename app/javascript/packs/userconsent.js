@@ -19,7 +19,7 @@ checkDisagree = () => {
 }
 
 goBack = () =>{
-    location.href = "/userhealth"
+    location.href = "/userdemographics"
 
     submitbtn.removeEventListener('click', submitInfo);
     agree.removeEventListener('click', checkAgree);
@@ -56,7 +56,7 @@ submitInfo = () => {
     .then(dataIn => console.log(dataIn))
     .catch(err => console.log(err))
     */
-    location.href = "/userdemographics"
+    location.href = "https://cs673-patientportal.herokuapp.com/#"
 
     submitbtn.removeEventListener('click', submitInfo);
     agree.removeEventListener('click', checkAgree);
