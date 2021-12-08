@@ -20,6 +20,7 @@ patientId = urlParams.get('patientId');
 
 submitInfo = () => {
     let data = {user:{
+    	id:patientId.value,
     	client_id:'1',
         first_name:fname.value,
         last_name:fname.value,
@@ -34,7 +35,7 @@ submitInfo = () => {
 console.log(JSON.stringify(data));
 
     fetch('/users',{
-        method:"POST",
+        method:"PATCH",
         headers: {'Accept': 'application/json', 'Content-Type':'application/json'},
         cache:"no-cache",
         body:JSON.stringify(data)
@@ -43,7 +44,7 @@ console.log(JSON.stringify(data));
     .then(dataIn => console.log(dataIn))
     .catch(err => console.log(err))
 
-    /*location.href = "/userinsurance"*/
+    location.href = "/userinsurance"
     
 
     nextbtn.removeEventListener('click', submitInfo);
