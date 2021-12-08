@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta name = "viewport" content = "width=device-width,initial-scale=1" />
-        <%= stylesheet_link_tag "userconsent.css" %>
+        <%= stylesheet_link_tag "userdemographics.css" %>
         <%= stylesheet_link_tag "progressbar.css" %>
     </head>
     <body>
@@ -39,15 +39,15 @@
             <div class = "rowinput">
                     <div class = "fieldname alias">
                         <h3>Race *</h3>
-                        <input type = "date" id = "dob" placeholder="DOB ','" id = "fname" />   
+                        <input type = "text" id = "race" />   
                     </div>
                     <div class = "fieldname alias">
                         <h3>Ethinicity *</h3>
-                        <input type = "text" id = "gender" placeholder="M or F" />
+                        <input type = "text" id = "ethinicity" />
                     </div>
                     <div class = "fieldname alias">
                         <h3>Income Group</h3>
-                        <input type = "text" id = "marital" placeholder="Single or Married" />
+                        <input type = "text" id = "income" />
                     </div>
                     
             </div>
@@ -59,18 +59,18 @@
                     </div>
                     <div class = "fieldname alias">
                         <h3> Emergency Contact Name *</h3>
-                        <input type = "text" id = "econtact" placeholder="Name" />
+                        <input type = "text" id = "econtact" />
                     </div>
                     <div class = "fieldname alias">
                         <h3>Emergency Contact Email</h3>
-                        <input type = "text" id = "eemail" placeholder="Enter valid email" />
+                        <input type = "text" id = "eemail" />
                     </div>
             </div>
 
              <div class = "rowinput">
                     <div class = "fieldname alias">
                         <h3>Emergency Contact Address</h3>
-                        <input type = "text" id = "eaddress" placeholder="Please enter in the form of: (xxx) xxx-xxxx" id = "fname" />   
+                        <input type = "text" id = "eaddress" placeholder="Please enter an address including street, city, state, zipcode" id = "fname" />   
                     </div>
             </div>
             
@@ -85,7 +85,7 @@
         
         
         
-        <%= javascript_pack_tag "userconsent.js" %>
+        <%= javascript_pack_tag "userdemographics.js" %>
         
     </body>
 </html>
