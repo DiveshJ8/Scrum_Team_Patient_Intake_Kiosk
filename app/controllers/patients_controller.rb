@@ -6,7 +6,7 @@ class PatientsController < ApplicationController
   def index
     @patients = Patient.all
   end
-
+  # GET /patientDetails gets all patients and their first and last names
   def patient_details
 	patients = ActiveRecord::Base.connection.exec_query("select patients.id, c.first_name, c.last_name from patients inner join users as c on c.id = patients.user_id")
     	render json: {status: 'Success', message: 'Loaded patients', patients: patients}, status: :ok
@@ -65,19 +65,27 @@ class PatientsController < ApplicationController
     end
   end
 
-
+  # GET /intake/:id/personalDetails get patient details
   def personalDetails
 	patient = Patient.select(:id,:user_id,:license_no,:sex,:height,:weight,:marital_status,:emergency_contact_number,:emergency_contact_name,:emergency_contact_address,:emergency_contact_email).find(params[:id])
 	render json: {"patient" => patient}, status: :ok
   end
+
+  # GET /intake/:id/insuranceDetails get patient insurance details
   def insuranceDetails
-	patient = Patient.select(:id,:user_id,:insurance_no,:rx_group,:rx_bin,:rx_pcn).find(params[:id])
+	patient = Patient.select(:id,:user_id,:insurance_no,:rx_group,:rx_bin,:rx_pcn, :provider, priority).find(params[:id])
 	render json: {"patient" => patient}, status: :ok
   end
+
+  # GET /intake/:id/demographicDetails get patient demographic details
+
   def demographicDetails
 	patient = Patient.select(:id,:user_id,:marital_status,:race,:ethnicity,:income_group).find(params[:id])
 	render json: {"patient" => patient}, status: :ok
   end
+
+  # GET /intake/:id/blueButton get patient blueButton health history
+
   def blueButton
 	patient = Patient.select(:id,:user_id,:blue_button_approval).find(params[:id])
 	if patient.blue_button_approval == true
@@ -91,19 +99,29 @@ class PatientsController < ApplicationController
 	end
   end
 
+  # PATCH /intake/:id/personalDetails update patient details
+
 def personalDetailsUpdate
 	patient = Patient.update(patient_params)
 	render json: {"patient" => patient}, status: :ok
   end
 
+  # PATCH /intake/:id/demographicDetails update patient demographic details
+
 def demographicDetailsUpdate
 	patient = Patient.update(patient_params)
 	render json: {"patient" => patient}, status: :ok
   end
+
+  # PATCH /intake/:id/insuranceDetails update patient insurance details
+
 def insuranceDetailsUpdate
 	patient = Patient.update(patient_params)
 	render json: {"patient" => patient}, status: :ok
   end
+
+  # PATCH /intake/:id/blueButton update patient blueButton health history
+
 def blueButtonUpdate
 	patient = Patient.update(patient_params)
 	render json: {"patient" => patient}, status: :ok

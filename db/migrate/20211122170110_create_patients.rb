@@ -21,6 +21,8 @@ class CreatePatients < ActiveRecord::Migration[6.1]
       t.string :visit_detail
       t.boolean :legal_consent
       t.string :insurance_no
+      t.string :priority
+      t.string :provider
       t.timestamps
     end
   end
