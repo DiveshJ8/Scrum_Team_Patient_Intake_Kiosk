@@ -32,6 +32,9 @@ patch 'intake/:id/blueButton', :to => 'patients#blueButtonUpdate'
 
 delete 'intake/:patient_id', :to => 'patients#destroy'
 
+root_to : "https://patient-login-main.herokuapp.com/"
+
+
   resources :sessions
   resources :patients
   resources :clients
