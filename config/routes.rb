@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/userinsurance', to: 'kioskpages#userinsurance'
   get '/userconsent', to: 'kioskpages#userconsent'
   get '/userhealth', to: 'kioskpages#userhealth'
-  get '/userdemographics', to: 'kioskpages#useruserdemographics'
+  get '/userdemographics', to: 'kioskpages#userdemographics'
 
 
 get 'healthinsurance', to: 'healthinsurance#new'
