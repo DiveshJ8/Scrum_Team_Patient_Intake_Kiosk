@@ -7,12 +7,12 @@
     <body>
         <section class = "insurance">
             <div class = "titlediv" id = "titlediv">
-                   <select>
+                   <select onChange="window.location.href=this.value">
                         <option value="none">Select a Page</option>
-                        <option value="Patient Health"><a href = "/userhealth">Patient Info</a></option>
-                        <option value="Patient Health"><a href = "/userinsurance">Patient Insurance</a></option>
-                        <option value="Patient Health">Patient Health</option>
-                        <option value="Patient Health"><a href = "/consent">Patient Consent</a></option>
+                        <option value="/userdetails">Patient Info</option>
+                        <option value="/userinsurance">Patient Insurance</option>
+                        <option value="/userhealth">Patient Health</option>
+                        <option value="/userconsent">Patient Consent</option>
                     </select>
             </div>  
 
