@@ -1,18 +1,20 @@
 submitbtn = document.getElementById("submitbtn")
+backbtn = document.getElementById('backbtn')
 agree = document.getElementById("agree")
 disagree = document.getElementById("disagree")
 
 
 
 checkAgree = () => {
-    if (!(agree.checked)){
-        agree.checked = true
+    
+    if (agree.checked == true && disagree.checked == true){
+        disagree.checked = false
     }
 }
 
 checkDisagree = () => {
-    if (!(disagree.checked)){
-        disagree.checked = true
+    if (agree.checked == true && disagree.checked == true){
+        agree.checked = false
     }
 }
 
@@ -25,7 +27,7 @@ goBack = () =>{
     backbtn.removeEventListener('click', goBack);
 }
 
-submitInfo = () => {
+checked = () => {
     let consent = ""
     if(disagree.checked){
         consent = disagree.value
@@ -39,9 +41,9 @@ submitInfo = () => {
         }
     }
 
-    let data = {
-        consent: consent
-    } 
+}
+
+submitInfo = () => {
     
     /*
     fetch('/demographics/up_demographicdetails',{
@@ -56,9 +58,9 @@ submitInfo = () => {
     */
     location.href = "/signin"
 
-    submitbtn.removeEventListener(click, submitInfo);
-    agree.removeEventListener(click, checkAgree);
-    disagree.removeEventListener(click, checkDisagree);
+    submitbtn.removeEventListener('click', submitInfo);
+    agree.removeEventListener('click', checkAgree);
+    disagree.removeEventListener('click', checkDisagree);
     backbtn.addEventListener('click', goBack);
 
 }

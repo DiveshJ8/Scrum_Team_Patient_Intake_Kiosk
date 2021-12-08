@@ -11,8 +11,7 @@ priority = document.getElementById('priority')
 
 
 
-next.addEventListener('click', nextpage);
-back.addEventListener('click', prevPage);
+
 
 prevPage = () => {
     
@@ -33,8 +32,7 @@ nextPage = () => {
         priority: priority
     }
 
-    
-
+    /*
     fetch('/insurances/up_userinsurance',{
         method:"POST",
         mode:"cors",
@@ -44,9 +42,13 @@ nextPage = () => {
     .then(responseIn => responseIn.text())
     .then(dataIn => console.log(dataIn))
     .catch(err => console.log(err))
+    */
 
     location.href = "/userhealth"
 
     back.removeEventListener('click', prevPage);
-    next.removeEventListener('click', nextpage);
+    next.removeEventListener('click', nextPage);
 }
+
+next.addEventListener('click', nextPage);
+back.addEventListener('click', prevPage);
