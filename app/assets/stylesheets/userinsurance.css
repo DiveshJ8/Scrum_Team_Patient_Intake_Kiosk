@@ -113,7 +113,7 @@ input[type="text"]{
     width: 100%;
     justify-content: center;
     align-items: center;
-    
+    background-color: white;
     position: relative;
     
 }
