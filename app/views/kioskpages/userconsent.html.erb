@@ -6,7 +6,16 @@
     </head>
     <body>
         <div class = "form">
-            <div class = "formtitle">Patient Consent</div>
+            <div class = "formtitle">Patient Consent
+                    <select onChange="window.location.href=this.value">
+                        <option value="none">Select a Page</option>
+                        <option value="/userdetails">Patient Info</option>
+                        <option value="/userinsurance">Patient Insurance</option>
+                        <option value="/userhealth">Patient Health</option>
+                        <option value="/userconsent">Patient Consent</option>
+                        <option value="/userdemographics">Patient Demographics</option>
+                    </select>
+            </div>
             <section class = "progressbar_main">
                 <%= render partial: "kioskpages/progressbar", :locals => {:progval1 => "11110"} %>
             </section>
@@ -20,7 +29,7 @@
             </div>
             <div class = "submitbtn">
                 <button id = "backbtn">Back</button>
-                <button id = "submitbtn">Finish</button>
+                <button id = "submitbtn">Next</button>
             </div>
         </div>
         

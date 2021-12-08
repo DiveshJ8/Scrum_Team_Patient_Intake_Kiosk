@@ -8,7 +8,14 @@
         
             <section class = "formsection" id = "formsection">
                 <div class = "titlediv" id = "titlediv">
-                   
+                   <select onChange="window.location.href=this.value">
+                        <option value="none">Select a Page</option>
+                        <option value="/userdetails">Patient Info</option>
+                        <option value="/userinsurance">Patient Insurance</option>
+                        <option value="/userhealth">Patient Health</option>
+                        <option value="/userconsent">Patient Consent</option>
+                        <option value="/userdemographics">Patient Demographics</option>
+                    </select>
                 </div>  
                 <section class = "progressbar_main">
                     <%= render partial: "kioskpages/progressbar", :locals => {:progval1 => "10000"} %>
@@ -45,11 +52,7 @@
                 </div> 
                 
                 <div class = "rowinput">
-                    <div class = "fieldname alias">
-                        <h3>DOB *</h3>
-                        
-                        <input type = "text" id = "dob" placeholder="DOB" />
-                    </div>
+                    
                     <div class = "fieldname alias">
                         <h3>Phone *</h3>
                         

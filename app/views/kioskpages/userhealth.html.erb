@@ -8,12 +8,13 @@
         
             <section class = "formsection" id = "formsection">
                 <div class = "titlediv" id = "titlediv">
-                   <select>
+                   <select onChange="window.location.href=this.value">
                         <option value="none">Select a Page</option>
-                        <option value="Patient Health"><a href = "/userhealth">Patient Info</a></option>
-                        <option value="Patient Health"><a href = "/userinsurance">Patient Insurance</a></option>
-                        <option value="Patient Health">Patient Health</option>
-                        <option value="Patient Health"><a href = "/consent">Patient Consent</a></option>
+                        <option value="/userdetails">Patient Info</option>
+                        <option value="/userinsurance">Patient Insurance</option>
+                        <option value="/userhealth">Patient Health</option>
+                        <option value="/userconsent">Patient Consent</option>
+                        <option value="/userdemographics">Patient Demographics</option>
                     </select>
                 </div>  
                  
@@ -62,11 +63,11 @@
                 <div class = "rowinput">
                     <div class = "fieldname alias">
                         <h3>Tetanus</h3>
-                        <input type = "date" id = "teta" placeholder="Medications: Enter a valid date" id = "fname" />   
+                        <input type = "date" id = "teta" placeholder="Medications: Enter a valid date" />   
                     </div>
                     <div class = "fieldname alias">
                         <h3>Flu</h3>
-                        <input type = "date" id = "flu" placeholder="Medications: Separate with a ','" id = "fname" />   
+                        <input type = "date" id = "flu" placeholder="Medications: Separate with a ','"  />   
                     </div>
                     
                     
@@ -75,15 +76,15 @@
                     
                     <div class = "fieldname alias">
                         <h3>Zoster</h3>
-                        <input type = "date" id = "zost" placeholder="Medications: Separate with a ','" id = "fname" />   
+                        <input type = "date" id = "zost" placeholder="Medications: Separate with a ','" />   
                     </div>
                     <div class = "fieldname alias">
                         <h3>Pneumovax</h3>
-                        <input type = "date" id = "pneu" placeholder="Medications: Separate with a ','" id = "fname" />   
+                        <input type = "date" id = "pneu" placeholder="Medications: Separate with a ','" />   
                     </div>
                     <div class = "fieldname alias">
                         <h3>Prevnar</h3>
-                        <input type = "date" id = "prevna" placeholder="Medications: Separate with a ','" id = "fname" />   
+                        <input type = "date" id = "prevna" placeholder="Medications: Separate with a ','" />   
                     </div>
                     
                 </div>

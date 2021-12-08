@@ -32,6 +32,15 @@
                         <% else %>
                             <div class = "section_box" id = "consentbox">Consent</div>
                         <% end %>
+                        <div class = "connector"></div>
+                    </div>
+                    <div class = "section">
+                        <% if progval1[4] == "1" %>
+                            <div class = "section_box active" id = "demographicbox">Demographics</div>
+                        <% else %>
+                            <div class = "section_box" id = "consentbox">Demographics</div>
+                        <% end %>
+                        
                         
                     </div>
                     <!-- Review Progress

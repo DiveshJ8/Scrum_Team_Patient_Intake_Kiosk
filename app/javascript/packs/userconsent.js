@@ -56,7 +56,7 @@ submitInfo = () => {
     .then(dataIn => console.log(dataIn))
     .catch(err => console.log(err))
     */
-    location.href = "/signin"
+    location.href = "/userdemographics"
 
     submitbtn.removeEventListener('click', submitInfo);
     agree.removeEventListener('click', checkAgree);
