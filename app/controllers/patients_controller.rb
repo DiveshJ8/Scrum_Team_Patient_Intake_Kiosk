@@ -68,15 +68,15 @@ class PatientsController < ApplicationController
 
   def personalDetails
 	patient = Patient.select(:id,:user_id,:license_no,:sex,:height,:weight,:marital_status,:emergency_contact_number,:emergency_contact_name,:emergency_contact_address,:emergency_contact_email).find(params[:id])
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
   def insuranceDetails
 	patient = Patient.select(:id,:user_id,:insurance_no,:rx_group,:rx_bin,:rx_pcn).find(params[:id])
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
   def demographicDetails
 	patient = Patient.select(:id,:user_id,:marital_status,:race,:ethnicity,:income_group).find(params[:id])
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
   def blueButton
 	patient = Patient.select(:id,:user_id,:blue_button_approval).find(params[:id])
@@ -93,20 +93,20 @@ class PatientsController < ApplicationController
 
 def personalDetailsUpdate
 	patient = Patient.update(patient_params)
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
 
 def demographicDetailsUpdate
 	patient = Patient.update(patient_params)
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
 def insuranceDetailsUpdate
 	patient = Patient.update(patient_params)
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
 def blueButtonUpdate
 	patient = Patient.update(patient_params)
-	render json: patient, status: :ok
+	render json: {"patient" => patient}, status: :ok
   end
 
   private
