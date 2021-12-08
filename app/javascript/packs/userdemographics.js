@@ -17,7 +17,7 @@ eaddress = document.getElementById('eaddress')
 
 
 goBack = () =>{
-    location.href = "/userconsent"
+    location.href = "/userhealth"
 
     submitbtn.removeEventListener('click', submitInfo);
     
@@ -51,7 +51,7 @@ submitInfo = () => {
     .then(dataIn => console.log(dataIn))
     .catch(err => console.log(err))
 
-    location.href = "https://patient-login.herokuapp.com/sign_in"
+    location.href = "/userconsent"
 
     submitbtn.removeEventListener('click', submitInfo);
     backbtn.addEventListener('click', goBack);

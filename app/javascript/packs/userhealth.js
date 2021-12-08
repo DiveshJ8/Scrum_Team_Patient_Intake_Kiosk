@@ -65,7 +65,7 @@ goNext = () => {
         console.log(dataIn)
     })
 
-    location.href = "/userconsent"
+    location.href = "/userdemographics"
     backbtn.removeEventListener('click', goBack);
     nextbtn.removeEventListener('click', goNext);
 }
