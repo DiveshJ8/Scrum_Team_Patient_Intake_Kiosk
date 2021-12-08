@@ -362,3 +362,76 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 38ms (Views: 20.6ms | ActiveRecord: 14.7ms | Allocations: 16958)
 
 
+Started GET "/clients" for 127.0.0.1 at 2021-12-07 20:40:33 -0500
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ClientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering clients/index.html.erb within layouts/application
+  [1m[36mClient Load (6.9ms)[0m  [1m[34mSELECT "clients".* FROM "clients"[0m
+  ↳ app/views/clients/index.html.erb:14
+  Rendered clients/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 4611)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 40.0ms | Allocations: 18258)
+Completed 200 OK in 52ms (Views: 24.7ms | ActiveRecord: 17.5ms | Allocations: 21441)
+
+
+Started GET "/sessions" for 127.0.0.1 at 2021-12-07 20:40:41 -0500
+Processing by SessionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/index.html.erb within layouts/application
+  [1m[36mSession Load (5.0ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions"[0m
+  ↳ app/views/sessions/index.html.erb:14
+  Rendered sessions/index.html.erb within layouts/application (Duration: 8.9ms | Allocations: 1196)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 6013)
+Completed 200 OK in 26ms (Views: 14.1ms | ActiveRecord: 5.0ms | Allocations: 7684)
+
+
+Started GET "/health_histories" for 127.0.0.1 at 2021-12-07 20:40:47 -0500
+Processing by HealthHistoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering health_histories/index.html.erb within layouts/application
+  [1m[36mHealthHistory Load (2.0ms)[0m  [1m[34mSELECT "health_histories".* FROM "health_histories"[0m
+  ↳ app/views/health_histories/index.html.erb:14
+  Rendered health_histories/index.html.erb within layouts/application (Duration: 42.7ms | Allocations: 13262)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 52.3ms | Allocations: 18079)
+Completed 200 OK in 62ms (Views: 45.0ms | ActiveRecord: 10.7ms | Allocations: 19424)
+
+
+Started GET "/patients" for 127.0.0.1 at 2021-12-07 20:40:55 -0500
+Processing by PatientsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mPatient Load (1.4ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  ↳ app/views/patients/index.html.erb:14
+  Rendered patients/index.html.erb within layouts/application (Duration: 66.1ms | Allocations: 18108)
+  Rendered layout layouts/application.html.erb (Duration: 66.4ms | Allocations: 18179)
+Completed 500 Internal Server Error in 75ms (ActiveRecord: 9.7ms | Allocations: 19529)
+
+
+  
+ActionView::Template::Error (undefined method `patient_id' for #<Patient:0x00007fb5db48ea70>):
+    13:   <tbody>
+    14:     <% @patients.each do |patient| %>
+    15:       <tr>
+    16:         <td><%= patient.patient_id %></td>
+    17:         <td><%= link_to 'Show', patient %></td>
+    18:         <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+    19:         <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  
+app/views/patients/index.html.erb:16
+app/views/patients/index.html.erb:14
+Started GET "/patients/new" for 127.0.0.1 at 2021-12-07 20:41:03 -0500
+Processing by PatientsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering patients/new.html.erb within layouts/application
+  Rendered patients/_form.html.erb (Duration: 24.5ms | Allocations: 10688)
+  Rendered patients/new.html.erb within layouts/application (Duration: 26.8ms | Allocations: 11055)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 15894)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.0ms | Allocations: 16561)
+
+
+Started GET "/" for 127.0.0.1 at 2021-12-07 21:51:37 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m

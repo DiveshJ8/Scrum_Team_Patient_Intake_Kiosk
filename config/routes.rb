@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+root to: redirect("https://patient-login-main.herokuapp.com/")
+
   get '/userdetails', to: 'kioskpages#userdetails'
   get '/userinsurance', to: 'kioskpages#userinsurance'
   get '/userconsent', to: 'kioskpages#userconsent'
