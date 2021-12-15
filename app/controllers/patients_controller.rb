@@ -73,7 +73,7 @@ class PatientsController < ApplicationController
 
   # GET /intake/:id/insuranceDetails get patient insurance details
   def insuranceDetails
-	patient = Patient.select(:id,:user_id,:insurance_no,:rx_group,:rx_bin,:rx_pcn, :provider, priority).find(params[:id])
+	patient = Patient.select(:id,:user_id,:insurance_no,:rx_group,:rx_bin,:rx_pcn,:provider,:priority).find(params[:id])
 	render json: {"patient" => patient}, status: :ok
   end
 
