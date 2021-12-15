@@ -44,8 +44,9 @@ checked = () => {
 }
 
 submitInfo = () => {
-    
 
+
+    /*
     fetch('/patients',{
         method:"PATCH",
         headers: {
@@ -58,14 +59,14 @@ submitInfo = () => {
     .then(responseIn => responseIn.text())
     .then(dataIn => console.log(dataIn))
     .catch(err => console.log(err))
-
+*/
     location.href = "https://cs673-patientportal.herokuapp.com/#"
 
 
     submitbtn.removeEventListener('click', submitInfo);
     agree.removeEventListener('click', checkAgree);
     disagree.removeEventListener('click', checkDisagree);
-    backbtn.addEventListener('click', goBack);
+    backbtn.removeEventListener('click', goBack);
 
 }
 
